@@ -1,0 +1,19 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Challange</title>
+    </head>
+    <body>
+        <script>
+        const numbers = [24,9,89,60,69,76,33,61,28];
+        const sortNums = numbers.sort((a, b) => a - b);
+        let hasil = []
+        for (i = 0; i <= sortNums.length; i += 2) {
+            var sliceIt = sortNums.slice(i, (i + 2))
+            hasil.push(sliceIt)
+        }
+        document.write(sortNums)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Challange</title>
+    </head>
+    <body>
+        <script>
+                var numbers = [10,2,3,4,5,6,7,8,9,10];
+                var max = Math.max.apply(Math, numbers);
+                var min = Math.min.apply(Math, numbers);
+                document.write("Dari Kumpulan angka ini : " +numbers+ "<br/>");
+                document.write("Angka Max " +max+ "<br/>");
+                document.write("Angka Mix " +min+ "<br/>");
+                function median(numbers){
+                    numbers= numbers.sort((a,b)=>a-b);
+                    if (numbers.length%2 !==0){
+                      return numbers[Math.floor(numbers.length/2)];
+                    } else{
+                        let mid1 = numbers[numbers.length/2];
+                        let mid2 = numbers[numbers.length/2-1];
+                        return (mid1+mid2)/2;
+                    }
+                }
+                document.write("Nilai Median dari Kumpulan Angka "+median(numbers)+"<br/>");
+                const jumlah = numbers.reduce((acc, curr) => acc + curr)
+                const rata = jumlah / numbers.length;
+                document.write("Jadi Rata-rata dari Kumpulan Angka : "+rata);
+        </script>
+    </body>
+</html>

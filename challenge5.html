@@ -1,0 +1,22 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Challange</title>
+    </head>
+    <body>
+        <script>
+            var str ="kucing"
+            function palindrome(str) {
+            var x = str.length-1;
+
+            if (x === 1 || str.length === 0) {
+            return true;
+            } if (str[0] === str[x]) {
+            return palindrome(str.slice(1, x));
+            } return false;
+            }
+            document.write(palindrome(str))      
+        </script>
+    </body>
+</html>
